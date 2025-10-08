@@ -1017,6 +1017,64 @@ textarea.form-input {
     }
 }
 
+/* Responsive Design Improvements */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 95vw;
+        padding: 0 var(--spacing-base);
+    }
+    .hero-avatar {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-logo .logo-text {
+        font-size: var(--font-size-xl);
+    }
+    .nav-container {
+        height: 55px;
+    }
+    .hero-title {
+        font-size: var(--font-size-2xl);
+    }
+    .hero-avatar {
+        width: 120px;
+        height: 120px;
+    }
+    .section-title {
+        font-size: var(--font-size-xl);
+    }
+    .project-image {
+        height: 120px;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 0 4px;
+    }
+    .btn {
+        font-size: var(--font-size-xs);
+        padding: var(--spacing-xs) var(--spacing-base);
+    }
+    .footer-text p {
+        font-size: var(--font-size-xs);
+    }
+}
+
 /* Utility Classes */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
