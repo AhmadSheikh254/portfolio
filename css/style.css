@@ -1187,3 +1187,86 @@ textarea.form-input {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-primary);
 }
+
+/* --- Global Responsive Overhaul --- */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 98vw;
+        padding: 0 16px;
+    }
+}
+@media (max-width: 900px) {
+    .container {
+        max-width: 100vw;
+        padding: 0 8px;
+    }
+    .nav-container {
+        max-width: 100vw;
+        padding: 0 8px;
+    }
+    .footer-content {
+        max-width: 100vw;
+        padding: 0 8px;
+    }
+}
+@media (max-width: 768px) {
+    .container, .nav-container, .footer-content {
+        max-width: 100vw;
+        padding: 0 4px;
+    }
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+    .hero-content, .about-content, .skills-grid, .projects-grid, .contact-content {
+        width: 100vw;
+        padding: 0 4px;
+        box-sizing: border-box;
+    }
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-xl);
+    }
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+    .hero-avatar {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+    .project-image {
+        height: 100px;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+@media (max-width: 480px) {
+    .container, .nav-container, .footer-content {
+        padding: 0 2px;
+    }
+    .section-title, .hero-title {
+        font-size: var(--font-size-xl);
+    }
+    .btn {
+        font-size: var(--font-size-xs);
+        padding: var(--spacing-xs) var(--spacing-base);
+    }
+    .footer-text p {
+        font-size: var(--font-size-xs);
+    }
+}
+/* Prevent horizontal scroll everywhere */
+html, body, .container, .section, .hero, .about, .skills, .projects, .contact, .footer {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
